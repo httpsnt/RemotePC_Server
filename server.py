@@ -97,6 +97,7 @@ def show_qr():
     """Genera y muestra el Código QR temporalmente."""
     uri = f"ws://{LOCAL_IP}:{PORT}/ws?token={TOKEN}"
     img = qrcode.make(uri)
+    img.save("mi_codigo_qr.png")
     # Abre la imagen con el visor predeterminado de Windows
     img.show() 
 
