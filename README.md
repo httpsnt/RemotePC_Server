@@ -1,5 +1,5 @@
 RemotePC - Control Remoto Local
-Una solución completa cliente-servidor que transforma un dispositivo móvil en un trackpad, teclado virtual y control multimedia para un PC. Diseñado para operar de forma segura y veloz a través de una red Wi-Fi local utilizando tecnología de WebSockets y autenticación por código QR.
+Una solución completa cliente-servidor que transforma un dispositivo móvil (optimizado para Android 16) en un trackpad, teclado virtual y control multimedia para un PC con Windows 11. Diseñado para operar de forma segura y veloz a través de una red Wi-Fi local utilizando tecnología de WebSockets y autenticación por código QR.
 
 🚀 Características Principales
 Servidor (Python)
@@ -26,7 +26,6 @@ Gestión de Sesión: Botón de desconexión rápida que corta el WebSocket y dev
 
 🛠️ Tecnologías Utilizadas
 Backend (RemotePC_Server):
-
 Python 3.x
 
 FastAPI & Uvicorn: Servidor ASGI de alto rendimiento.
@@ -42,7 +41,6 @@ Pystray, Pillow: Control de la bandeja del sistema de Windows.
 Qrcode: Generación de matriz de datos para el emparejamiento.
 
 Frontend (RemotePCClient):
-
 React Native (Expo SDK 54)
 
 Expo Camera: Escaneo de códigos QR.
@@ -53,18 +51,14 @@ PanResponder: Sistema nativo de React para la lectura de gestos de deslizamiento
 
 📦 Instalación y Configuración
 1. Configurar el Servidor (PC)
-Abre una terminal en la carpeta RemotePC_Server.
-
-Instala todas las dependencias necesarias ejecutando:
+Abre una terminal en la carpeta RemotePC_Server. Instala todas las dependencias necesarias ejecutando:
 
 Bash
 pip install fastapi uvicorn websockets pyautogui pynput qrcode[pil] pystray pillow keyboard
 Nota de red: Asegúrate de permitir las conexiones entrantes de Python en tu Firewall de Windows (Puerto TCP 8765).
 
 2. Configurar el Cliente (Móvil)
-Abre una terminal en la carpeta RemotePCClient.
-
-Instala las dependencias respetando el bloqueo de versiones (SDK 54):
+Abre una terminal en la carpeta RemotePCClient. Instala las dependencias respetando el bloqueo de versiones (SDK 54):
 
 Bash
 npm install --legacy-peer-deps
